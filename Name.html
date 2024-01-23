@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Checker</title>
+</head>
+<body>
+
+    <h1>Name Checker</h1>
+
+    <form id="nameForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="button" onclick="checkName()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function checkName() {
+            var enteredName = document.getElementById("name").value;
+            var resultMessage = document.getElementById("result");
+
+            if (enteredName.toLowerCase() === "nowma") {
+                resultMessage.textContent = "Correct name detected, Cute baby Nowmyy";
+            } else {
+                resultMessage.textContent = "Entered wrong name";
+            }
+        }
+    </script>
+
+</body>
+</html>
